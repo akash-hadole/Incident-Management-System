@@ -1,0 +1,88 @@
+.sim-fab {
+  position: fixed;
+  bottom: 28px;
+  left: 28px;
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a2a4a, #0f1628);
+  border: 1px solid var(--border2);
+  color: var(--yellow);
+  font-size: 22px;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  transition: all 0.2s;
+  z-index: 100;
+}
+.sim-fab:hover { transform: scale(1.05); border-color: var(--accent); box-shadow: 0 4px 24px rgba(61,139,255,0.3); }
+
+.sim-panel {
+  position: fixed;
+  bottom: 92px;
+  left: 28px;
+  width: 320px;
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+  z-index: 99;
+  animation: slideIn 0.2s ease;
+}
+
+.sim-header {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg3);
+}
+.sim-title { font-size: 10px; letter-spacing: 0.2em; color: var(--text-muted); }
+
+.sim-body { padding: 16px; display: flex; flex-direction: column; gap: 14px; }
+
+.sim-section-label {
+  font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em;
+  color: var(--text-dim); margin-bottom: -6px;
+}
+
+.sim-scenarios { display: flex; flex-direction: column; gap: 6px; }
+.sim-scenario-btn {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 10px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 12px;
+  text-align: left;
+  transition: all 0.15s;
+}
+.sim-scenario-btn:hover { background: var(--surface2); border-color: var(--border2); }
+.sim-scenario-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.sim-count { font-family: var(--mono); font-size: 10px; color: var(--text-dim); }
+
+.sim-custom { display: flex; flex-direction: column; gap: 8px; }
+.sim-input {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 11px;
+  width: 100%;
+}
+.sim-input:focus { border-color: var(--accent); outline: none; }
+.sim-input option { background: var(--surface); }
+
+.sim-send-btn {
+  padding: 10px;
+  background: rgba(245,197,24,0.15);
+  border: 1px solid rgba(245,197,24,0.4);
+  color: var(--yellow);
+  border-radius: 6px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  transition: all 0.2s;
+}
+.sim-send-btn:hover { background: rgba(245,197,24,0.25); }
+.sim-send-btn:disabled { opacity: 0.5; cursor: not-allowed; }

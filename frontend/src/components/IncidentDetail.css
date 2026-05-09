@@ -1,0 +1,144 @@
+.detail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.detail-header {
+  padding: 20px 28px 0;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg2);
+}
+
+.detail-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.detail-id { font-family: var(--mono); font-size: 11px; color: var(--text-dim); margin-bottom: 4px; }
+.detail-title { font-size: 22px; font-weight: 800; color: var(--text); margin-bottom: 4px; }
+.detail-alert-msg { font-family: var(--mono); font-size: 11px; color: var(--text-muted); }
+
+.close-btn {
+  background: rgba(255,255,255,0.05);
+  color: var(--text-muted);
+  width: 32px; height: 32px;
+  border-radius: 6px;
+  font-size: 14px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s;
+}
+.close-btn:hover { background: rgba(255,69,96,0.2); color: var(--red); }
+
+/* Stepper */
+.stepper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.step { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.step-dot {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--mono); font-size: 11px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  transition: all 0.3s;
+}
+.step--done .step-dot { background: rgba(0,214,143,0.15); border-color: var(--green); color: var(--green); }
+.step--active .step-dot { background: rgba(61,139,255,0.2); border-color: var(--accent); color: var(--accent); animation: glow-pulse 2s infinite; }
+.step-label { font-family: var(--mono); font-size: 9px; letter-spacing: 0.1em; color: var(--text-dim); }
+.step--done .step-label, .step--active .step-label { color: var(--text-muted); }
+
+.step-line { flex: 1; height: 1px; background: var(--border); margin: 0 6px; margin-bottom: 16px; transition: background 0.3s; }
+.step-line--done { background: var(--green); }
+
+.detail-meta {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.meta-item { display: flex; flex-direction: column; gap: 3px; }
+.meta-label { font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em; color: var(--text-dim); }
+.meta-val { font-size: 13px; font-weight: 600; color: var(--text); }
+.meta-val.mono { font-family: var(--mono); font-size: 12px; }
+.meta-val.accent { color: var(--accent2); }
+.meta-val.p--P0 { color: var(--red); }
+.meta-val.p--P1 { color: var(--orange); }
+.meta-val.p--P2 { color: var(--yellow); }
+
+.transition-btn {
+  margin-bottom: 0;
+  padding: 10px 22px;
+  background: rgba(61,139,255,0.15);
+  border: 1px solid rgba(61,139,255,0.4);
+  color: var(--accent2);
+  border-radius: 6px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  transition: all 0.2s;
+  margin-bottom: 16px;
+  align-self: flex-start;
+}
+.transition-btn:hover { background: rgba(61,139,255,0.25); }
+.transition-btn--close { background: rgba(0,214,143,0.1); border-color: rgba(0,214,143,0.4); color: var(--green); }
+.transition-btn--close:hover { background: rgba(0,214,143,0.2); }
+.transition-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.detail-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  padding: 0 28px;
+  background: var(--bg2);
+}
+.tab {
+  padding: 12px 20px;
+  background: none;
+  color: var(--text-dim);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  position: relative;
+}
+.tab--active { color: var(--accent); border-bottom-color: var(--accent); }
+.tab:hover:not(.tab--active) { color: var(--text-muted); }
+.tab-dot {
+  display: inline-block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.detail-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px 28px;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.info-block {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.info-label { font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em; color: var(--text-dim); margin-bottom: 6px; }
+.info-value { font-size: 13px; color: var(--text); font-weight: 600; }
+.info-value.mono { font-family: var(--mono); font-size: 12px; font-weight: 400; }

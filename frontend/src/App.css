@@ -1,0 +1,33 @@
+.app { display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+
+.app-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  gap: 0;
+}
+
+.toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 1000;
+}
+
+.toast {
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-family: var(--mono);
+  font-size: 12px;
+  animation: slideIn 0.3s ease;
+  border-left: 3px solid;
+  backdrop-filter: blur(10px);
+}
+
+.toast--info { background: rgba(10,15,30,0.95); border-color: var(--accent); color: var(--accent2); }
+.toast--warning { background: rgba(10,15,30,0.95); border-color: var(--orange); color: var(--orange); }
+.toast--success { background: rgba(10,15,30,0.95); border-color: var(--green); color: var(--green); }
+.toast--error { background: rgba(10,15,30,0.95); border-color: var(--red); color: var(--red); }
