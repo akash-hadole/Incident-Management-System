@@ -1,0 +1,66 @@
+.rca-form { display: flex; flex-direction: column; gap: 20px; max-width: 700px; }
+
+.rca-badge {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 16px;
+  background: rgba(0,214,143,0.08);
+  border: 1px solid rgba(0,214,143,0.3);
+  border-radius: 6px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--green);
+}
+.rca-badge-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+.form-group { display: flex; flex-direction: column; gap: 8px; }
+
+.form-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--text-dim);
+}
+
+.form-input {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 14px;
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 12px;
+  transition: border-color 0.2s;
+  appearance: none;
+}
+.form-input:focus { border-color: var(--accent); }
+.form-input:disabled { opacity: 0.5; cursor: not-allowed; }
+.form-input option { background: var(--surface); }
+
+.form-textarea { resize: vertical; line-height: 1.6; }
+
+.rca-submit-btn {
+  padding: 12px 28px;
+  background: linear-gradient(135deg, rgba(61,139,255,0.2), rgba(91,159,255,0.1));
+  border: 1px solid rgba(61,139,255,0.5);
+  color: var(--accent2);
+  border-radius: 6px;
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  transition: all 0.2s;
+  align-self: flex-start;
+}
+.rca-submit-btn:hover { background: rgba(61,139,255,0.3); border-color: var(--accent); }
+.rca-submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.mttr-display {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px 24px;
+  text-align: center;
+}
+.mttr-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; color: var(--text-dim); margin-bottom: 8px; }
+.mttr-value { font-size: 36px; font-weight: 800; color: var(--green); }

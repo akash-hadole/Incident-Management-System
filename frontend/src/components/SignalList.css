@@ -1,0 +1,26 @@
+.sig-empty { color: var(--text-muted); font-family: var(--mono); font-size: 12px; padding: 20px 0; }
+.sig-list { display: flex; flex-direction: column; gap: 8px; }
+.sig-count { font-size: 10px; color: var(--text-dim); letter-spacing: 0.1em; margin-bottom: 8px; }
+
+.sig-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 14px;
+}
+
+.sig-top { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+
+.sig-sev {
+  font-family: var(--mono); font-size: 9px; padding: 2px 7px;
+  border-radius: 3px; letter-spacing: 0.1em;
+}
+.sev--red { background: rgba(255,69,96,0.15); color: var(--red); }
+.sev--orange { background: rgba(255,140,66,0.15); color: var(--orange); }
+.sev--yellow { background: rgba(245,197,24,0.1); color: var(--yellow); }
+.sev--accent { background: rgba(61,139,255,0.1); color: var(--accent); }
+
+.sig-id { font-family: var(--mono); font-size: 10px; color: var(--text-dim); }
+.sig-time { font-family: var(--mono); font-size: 10px; color: var(--text-dim); margin-left: auto; }
+.sig-msg { font-size: 12px; color: var(--text-muted); margin-bottom: 4px; }
+.sig-meta { font-size: 10px; color: var(--text-dim); background: var(--bg); padding: 4px 8px; border-radius: 4px; overflow-x: auto; }
